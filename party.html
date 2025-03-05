@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script defer src="party.html"></script>
-    <link rel="stylesheet" href="party.css">
+    <title>Party Data</title>
+    <script defer src="party.js"></script>
+    <link rel="stylesheet" href="party.css" />
   </head>
   <body>
-    <div class="mainTable">
+    <!--  <div class="mainTable">
       <h1>"Party Time"</h1>
 
       <table>
@@ -57,11 +57,42 @@
     </div>
    
 <form action="" method="get"></form>
-<!--Do I need a form to be able to accept data fields from the user and 
+Do I need a form to be able to accept data fields from the user and 
 have that data updated the list?-->
 
+    <h1>Party Time</h1>
+    <table id="eventAllData">
+      <thead>
+        <!--Define column names-->
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Date</th>
+          <th scope="col">Location</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="partyTableBody">
+        <!--Where we will insert table data w/ JS-->
+      </tbody>
+    </table>
 
+    <h2>New party data</h2>
+    <form id="eventForm">
+      <label for="partyName">Event Name:</label>
+      <input type="text" id="partyName" />
 
+      <label for="partydescr">Description:</label>
+      <input type="text" id="partydescr" />
+
+      <label for="partydate">Event Date:</label>
+      <input type="datetime-local" id="partydate" />
+
+      <label for="partyloc">Event Location:</label>
+      <input type="text" id="partyloc" />
+
+      <button id="submitButton" type="submit">Add Party</button>
+    </form>
   </body>
 </html>
-
